@@ -22,29 +22,5 @@ public class EquipajeController {
     @Autowired
     private EquipajeService equipajeService;
 
-    @GetMapping
-    public List<Equipaje> mostrarEquipaje(){
-        return equipajeService.getEquipajes();
-    }
-
-    @PostMapping
-    public Equipaje agregarEquipaje(@RequestBody Equipaje equip){
-        return equipajeService.addEquipaje(equip);
-    }
-
-    @DeleteMapping("{id}")
-    public String borrarEquipaje(@PathVariable int id){
-        return equipajeService.deleteEquipaje(id);
-    }
-
-    @PutMapping("{id}")
-    public Equipaje actualizarEquipaje(@RequestBody Equipaje equip){
-        return equipajeService.updatEquipaje(equip);
-    }
-
-    @GetMapping("{id}")
-    public Equipaje buscarEquipaje(@PathVariable int id) {
-        return equipajeService.searchEquipaje(id);
-    }
     
 }
